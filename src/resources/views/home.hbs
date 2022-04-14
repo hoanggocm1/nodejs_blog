@@ -1,2 +1,32 @@
+<h1>{{title}}</h1>
+<div class='mt-4 ml-2 mr-2'>
+    <div class='row'>
+        {{#each courses}}
+            <div class='col-sm-6 col-lg-4 pb-1 khoahoc'>
+                <div class='card' style='height: 100%;'>
+                    <a href='courses/{{this.slug}}' style='height:40%'>
+                        <img
+                            class='card-img-top'
+                            src='{{this.image}}'
+                            height='95%'
+                            alt='{{this.name}}'
+                        />
+                    </a>
 
-<h1>Trang home ne</h1>
+                    <div class='card-body' style='height: 60%;'>
+                        <a href='courses/{{this.slug}}'>
+                            <h5 class='card-title'>{{this.name}}</h5>
+                        </a>
+
+                        <p
+                            class='card-text'
+                            style='height: 60%; overflow: hidden;'
+                        >{{this.description}}</p>
+
+                        <a href='#' class='btn btn-primary'>Go somewhere</a>
+                    </div>
+                </div>
+            </div>
+        {{/each}}
+    </div>
+</div>
